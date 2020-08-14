@@ -1,0 +1,90 @@
+﻿Source code Vs Object Code
+    >>Collection of instructions written using a human-readable programming language is called the Source Code.i.e. Java Program written by me
+   >>Compiler converting code into machine understandable form is called object code.
+       Source Code -> Compiler/assembler = Object Code
+
+
+Using Compiler with flags
+To run a java program with given specifications like max heap etc.
+javac --help will give list of this flags
+
+Keywords, Variables 
+Keywords are predefined, reserved words used in Java programming that have special meanings to the compiler.
+Variables is a piece of memory that can contain a data value, it has data type.
+
+Variable scope, lifetime, life time, initial value, modifiers
+Variable has class level, method level scope, block scope.
+modifiers public, private , protected, default
+byte 0
+short 0 
+int 0 
+long 0L 
+float 0.0f 
+double 0.0d 
+char ‘u0000’ 
+String (or any object) null 
+boolean false
+
+Programming Constructs (Selection construct and loop constructs)
+if()/else and switch() selection constructs
+while(), do and for() and for each loop(JAVA8) loop construct.
+
+Declare Array
+Array is a collection of contiguous memory locations used to store homogeneous values.
+int arr[] = new arr[10]
+
+
+Store data in array and process elements
+//Scanner sc = new Scanner(System.in)
+for(int i=0; i<10; i++)
+{
+   arr[i]=sc.nextInt()
+}
+
+Pointers, Declare and Initialize pointers
+Function definitions/invocations
+return_type funcname(arguments)
+{
+  body
+}
+
+
+obj.funcname() //non static functions
+
+
+Call functions by passing values and addresses
+Calling a function by passing a value does not change original values which are passed.
+Calling functions by passing addresses actually change original values which are passed.
+
+
+Dynamic memory allocation/deallocation
+Dynamic memory allocation means initial memory requirements are changed at runtime according to need.
+Deallocation means once the scope of a particular block is over then that is marked for garbage collection in order to use that memory efficiently.
+
+Memory leakage
+when objects are no longer being used by the application, but the Garbage Collector is unable to remove them from working memory – because they’re still being referenced.
+
+User Defined Structures
+Access data members
+
+Dynamic memory allocation for user defined structures
+All Java objects are dynamically allocated. You're always passing around references to them.
+when we only declare a variable of a class type, only a reference is created (memory is not allocated for the object). To allocate memory to an object, we must use new(). So the object is always allocated memory on heap 
+
+Array of pointers
+By using wrapper classes like Integer, Float etc.
+
+Iterate on array of pointers
+Implement Data Structures
+Linked List
+  nodes with values and addresses.dynamic in nature.used when initial memory requirements will change.
+
+Stack
+   Linear data structures, Last in first out.
+
+Queue
+     Linear data structures, First in first out.
+Binary Tree
+A binary tree is a hierarchical data structure in which each node has at most two children generally referred as left child and right child.
+Parent
+Left child and right child
