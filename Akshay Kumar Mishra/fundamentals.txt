@@ -1,0 +1,96 @@
+------------------------Day_1----------------------------------------------------------------------------------------------------------------------
+     
+    * Source Code Vs Object Code
+       - Source code is human Readable and written in high level languages like C, C++ , Java , Python but Object code is machine readable
+         and it is in encrypted format. Java generate object code in .class file after the compilation of source code.
+
+    * Using Compiler With Flags
+       - We can use debug mode in eclipse and identify breakpoints , show that we can check the contents of variables while compilation.
+
+
+    * Keywords and Variables
+       - Keywords are set of reserved words in a programming language like if , else , switch , abstract , super.
+       - Variables are like containers which are used to store the data. Variables can have different datatypes 
+         like int String float etc.
+
+    * Variable Scope , Lifetime , initial value , modifier
+       - Variables are accessible within the scope in which it is declared. Scope can be method level , class level.
+       - Lifetime of a variable is said to be the time period in which the variable is residing in the program memory.
+       - If we do not initialize a variable with some value then default value is assigned to it by the compiler.
+ 
+    * Programming Constructs (Selection constructs and Loop constructs)
+       - Selection constructs are used to execute the statements if certain conditions hold true . e.g if,else,switch
+       - Loop constructs are used for multiple executions of a code block for a certain condition. e.g for,do-while,while
+    
+    * Declare Array
+       - Array is the collection of elements of a similar datatype. 
+         Array declaration syntax in Java is : int array_name[] = new int[size];
+    
+    * Store Data in Array and Process Elements
+       - Data can be stored in the array by directly giving the index of the array also linear traversal can be done to process the 
+         elements.
+         e.g int array[] = new int[]{1,2,4,5,6,7} ;
+
+
+----------------------DAY_2-----------------------------------------------------------------------------------------------------------------
+
+    * Pointers , Declare and Initialize Pointers
+       - In java pointers are also known as reference variables. In java developers have no control over pointers , jvm handles them 
+         internally.
+       
+    * Functions definitions/invocations
+       - Functions are a block of code which performs a specific task and can be invoked from anywhere within the scope.
+    
+    * Call functions by passing value and passing reference
+       - Functions can have parameters and both values and references can be passed as an argument to the function. If the values are passed
+         then changes are not reflected in the actual variables but when references are passed then changes made in the functions are also 
+         reflected outside the function.
+
+    * Dynamic Memory allocation/deallocation
+       - When memory is allocated at the runtime of a program then it is termed as the dynamic memory allocation , once the variable or objects
+         goes out of scope then it is deleted from the memory and the memory held by it is freed , this process is called as memory deallocation.
+         In java memory deallocation is done by Garbage Collector. We have tools like jvisualvm and jconsole to analyze the memory and cpu 
+         uses of our java program.
+
+    * Memory Leakage
+       - Memory leak occurs when the allocated memory is not deallocated properly. To avoid memory leaks, memory allocated on heap should 
+         always be freed when no longer needed.
+     
+    * User Defined Structures
+       - User defined structures are used for a collection of elements of different datatypes.
+         e.g class , structures and unions
+     
+    * Access Data Members
+       - User Defined structures consists of data members and member functions. These data members can be accessed by the member functions
+         and getters and setters.
+   
+    * Dynamic Memory Allocation for user defined structures
+       - Memory can be allocated to the objects using the constructors and default values or specified values are initialized for the 
+         data members.
+
+    * Array of Pointers
+       - In java we have array of objects to store multiple objects of a particular class.
+
+    * Iterate over array of Pointers
+       - Array of objects can be iterated using the for loop and objects can be printed in a specific format by overriding the toString method.
+
+
+-------------------------DAY_3-------------------------------------------------------------------------------------------------------------------
+
+    * Implement Data Structures
+      - Implementation of data structures like array , linkedlist , stack , queue , binary tree.
+    
+    * LinkedList
+      - Linkedlist is the linear data structure having sequential access to elements , dynamic memory allocation and elements can be stored and
+        retrieved from anywhere in the linkedlist.
+    * Stacks 
+      - Stack is a linear data structure having sequential access to elements , dynamic memory allocation or static allocation depends on the
+        type of implementation and elements can be stored and retrieved only at the top of the stack.
+  
+    * Queues
+      - Queue is a linear data structure having sequential access to elements , dynamic memory allocation or static allocation depends on the
+        type of implementation and elements can be stored and retrieved only at the front and rear of the queue.
+   
+    * Binary Tree
+      - Binary trees are hierarchical data structures in the form of roots and its children where each node can have at most two children.
+        These have sequential access and dynamic memory allocation. There are two types of traversals BFS and DFS.
