@@ -1,1 +1,215 @@
+Day 1
+
+----Source code vs Object code-----
+Source code is the code which we write i.e, .java extension where as object code is the intermediate
+code after compilation i.e, .class extension. Source code is converted to object code using javac command.
+
+----Using Compiler with flags------
+.javac ClassName.java-- converts sourcecode to bytecode
+.java ClassName-- runs the compiled code 
+.java -verbose---displays all the classes loaded 
+.path-- to set the required path
+
+------Keywords,Variables----------
+.keywords--reserved words which should not be used for methods/variable names. eg:int,switch,continue,float
+.variable-- used to store value
+ .datatypes
+  .primitive----byte,char,boolean,short,int,long,float,double   
+  .Non primitive---String,Array(dont store value directly but store address of the value in memory)
+
+-----Variable scope,lifetime,initial value,modifiers-----
+.variable scope and lifetime-- method/block till which the variable can be accessed
+  .class variables-- in the entire class
+  .function variables/parameters-- within the function
+  .local variable--- local to that method only
+.initial value 
+  . non-class variables should be initialised.
+  . class variables get the default value if not initialised when object is created.
+   .default value of int,byte,short,long-0,float/double-0.0,boolean-false,char-null character,object-null
+.modifiers
+ .access modifiers--public,private,protected
+ .non-access modifiers--static,final
+
+--------Programming Constructs(selection and loop constructs)-----------
+
+selection--if and switch
+if-- condition is true executes the body of if
+switch-- to select a particular case and execute it
+
+loop--for,while,do while
+do while-executes the body of the loop atleast once before checking condition
+for and while-checks the condition and then executes the body of the loop
+
+-------Declare Array--------------
+int a[]=new int[5];--->static allocation of 5 elements at contiguous location
+
+-----Store data in array and process----------
+Initialise an array
+	int a[]=new int[]{1,2,3,4,5}; 
+Store data in array
+	for(int i=0;i<arr.length;i++)
+ 		arr[i]=i;
+args is a array of strings 
+	for(String s: args)
+	System.out.println(s);
+		(or)
+ 	for(int i=0;i<args.length;i++)
+	System.out.println(args[i]);
+
+Day 2
+-------------Pointers,Declare and Initialise pointers----------
+.pointer-- variable which stores address of other variable.Java does not support pointers
+ inorder to reduce run time exceptions and for security purpose.It uses references instead.
+.In java strings a string literal stores the address of the value in memory
+     String s="rohit";
+ Whenever we use object the object variable stores the reference to the heap.
+
+----------Function definition/invocations-------
+ void fun(){
+----function defintion/function body--------
+}
+fun()---invocation/calling
+
+----Call functions by passing values and addresses--------
+
+.Call by value
+
+in main function
+int a=10,b=20;
+//a=10; b=20;
+fun(a,b);
+//a=10; b=20;
+
+in fun method
+fun(int a,int b){
+//a=10,b=20; 
+a=a+10;
+b=b+10;
+// a=20,b=30;
+}
+In call by value the calling method maintains a copy of the passed values hence any changes made in
+called function will not be reflected in the calling function.
+
+.Call by address
+ class Number {
+ int a;
+ int b;
+  }
+ in main function
+ //num.a=10; num.b=20;
+ Number num=new Number();
+  fun(num);
+ //num.a=20; num.b=30;
+
+ in fun method
+
+  fun(Number num){
+  //num.a=10,num.b=20; 
+  a=a+10;
+  b=b+10;
+  //num.a=20,num.b=30;
+}
+In Call by address the values changed in the called method will be reflected in the calling method as
+we are passing object and the same memory is accessed by both functions and any value changed will be 
+reflected.
+------Dynamic memory allocation and deallocation in java------
+Memory is allocated and deallocated by JVM.
+new keyword is used to allocate the memory
+Garbage collector is used in java for deallocation of memory. It is not under the control of developer.
+A memory allocated to function is destroyed once the function call is finished
+----Memory leakage---------
+Memory leakage occurs when an object is not used but its reference is not removed i.e garbage collector
+is unable to remove that object due to the existence of the object reference somewhere.
+
+----User Defined Structures,Access data members,Dynamic allocation for user defined structures---
+ class Student{
+ private int id
+ private String name;
+}
+to access private members we need to use public getters and setters
+public void getName(){
+return name;
+}
+public void getId(){
+return id;
+}
+public void setId(int id){
+this.id=id;
+}
+public void setName(String name){
+this.name=name;
+}
+.dynamic memory allocation for classes- 
+using new keyword an object is created.
+Heap memory is used for storing objects.
+the reference to the object is stored in stack memory and all the functions called will also be
+stored in stack memory.
+
+----Array of pointers and Iterate on array of pointers----
+
+class Employee{
+	private int empno;
+	private String ename;
+	private double salary;
+}
+Array of objects-----Employee arr[]=new Employee[5];---- create 5 employee objects in an array
+.Iterate over array of objects
+	for(int j=0;j<5;j++) {
+		System.out.println(arr[j].getEmpno()+" "+arr[j].getEname()+" "+arr[j].getSalary());
+	}
+
+
+Day 3
+
+Data Structures
+
+---------Array-----------
+.Linear data structure
+.contiguous allocation of elements in memory
+.Random access
+.Static Allocation
+.methods: crud operations (create,read,update,delete)
+
+-------Linked List--------
+.Linear data structure
+.Sequential access
+.Dynamic Allocation
+.elements are accessed by next pointer 
+.methods: 
+  insert--insertfirst,insertlast,insertatposition
+  delete--deletefirst,deletelast,deleteatposition 
+  print--displaying elements of linked list 
+
+--------Stack-------------
+.Linear data structure
+.LIFO(Last In First Out)
+.Sequential access
+.methods:
+ push(insert element into stack)
+ pop(delete top element from stack)
+ peek(display/return the top element)
+ isEmpty(to check whether stack is empty)
+
+---------Queue--------------
+.Linear data structure
+.FIFO(First In First Out)
+.Sequential Access
+.consists of front and rear pointers
+.methods:
+  enqueue(insert element at rear)
+  dequeue(delete element from front)
+  isEmpty(to check whether queue is empty)
+
+-------Binary Tree-----------
+ .Non linear data structure
+ .consists of root node,
+ .every node has atmost 2 children(left and right)
+ .Sequential Access
+ .Dynamic Allocation
+ .methods
+  insert(parentnode,pos)--insert this node to the given parentnode at specified pos(left/right)
+  delete(node)--- delete the node from the tree
+  getAllChildren(parent)--return all the children nodes of given parent node
+  getParent(children)--get the parent node of the given children node
+
 
